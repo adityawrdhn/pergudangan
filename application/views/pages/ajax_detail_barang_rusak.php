@@ -1,0 +1,36 @@
+<?php
+if(isset($detail_barang)){
+    foreach($detail_barang as $row){
+        ?>
+
+        <div class="control-group">
+            <label class="control-label">Kode Barang</label>
+            <div class="controls">
+                <input name="kd_barang" type="text" value="<?php echo $row->kd_barang; ?>" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="control-group ">
+            <label class="control-label">Harga</label>
+            <div class="controls ">
+                <input name="harga" type="text" value="<?php echo $row->harga; ?>" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Ready Stok</label>
+            <div class="controls">
+                <input id="stok" name="stok" type="text" value="<?php echo $row->stok; ?>" readonly="readonly">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Jumlah Barang Rusak</label>
+            <div class="controls">
+                <input name="qty" type="text" class="" placeholder="Input Jumlah Barang Rusak...">
+            </div>
+        </div>
+    <?php
+    }
+}
+?>
